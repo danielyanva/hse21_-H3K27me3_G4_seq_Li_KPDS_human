@@ -1,7 +1,6 @@
-# if (!requireNamespace("BiocManager", quietly = TRUE))
 install.packages("BiocManager")
 BiocManager::install("TxDb.Hsapiens.UCSC.hg19.knownGene")
-
+BiocManager::install("ChIPseeker")
 
 library(ggplot2)
 library(dplyr)
@@ -10,12 +9,11 @@ library(TxDb.Hsapiens.UCSC.hg19.knownGene)
 library(clusterProfiler)
 
 ###
-
-
-NAME <- 'H3K27me3_HeLa-S3.ENCFF428MSN.hg19'
-# NAME <- 'H3K27me3_HeLa-S3.ENCFF584RYA.hg19'
+NAME <- 'G4'
+# NAME <- 'H3K27me3_HeLa-S3.ENCFF428MSN.hg19.filtered'
+# NAME <- 'H3K27me3_HeLa-S3.ENCFF584RYA.hg19.filtered'
 OUT_DIR <- 'C:/Users/danie/Documents/hell/Results'
-BED_FN <- paste0('C:/Users/danie/Documents/hell/', NAME, '.bed')
+BED_FN <- paste0(DATA_DIR, NAME, '.bed')
 
 ###
 
@@ -32,4 +30,3 @@ peak <- readPeakFile(BED_FN)
 pdf(paste0(OUT_DIR, 'chip_seeker.', NAME, '.covplot.pdf'))
 covplot(peak, weightCol="V5")
 dev.off()
-# 
