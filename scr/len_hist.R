@@ -1,5 +1,5 @@
 
-DATA_DIR <- 'C:/Users/danie/Documents/GitHub/hse21_-H3K27me3_G4_seq_Li_KPDS_human/data'
+DATA_DIR <- 'C:/Users/danie/Documents/GitHub/hse21_-H3K27me3_G4_seq_Li_KPDS_human/data/'
 NAME <- 'G4'
 #NAME <- 'H3K27me3_HeLa-S3_intersect_with_G4'
 #NAME <- 'H3K4me3_A549.ENCFF573MUH.hg19'
